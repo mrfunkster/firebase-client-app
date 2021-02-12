@@ -10,10 +10,8 @@ import './App.css'
 function App() {
   return (
     <>
-      <div className="content-wrapper">
-        <Header />
-        <Main />
-      </div>
+      <Header />
+      <Main />
       <Footer />
     </>
   );
