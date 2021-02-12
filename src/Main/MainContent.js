@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 import { connect } from 'react-redux';
+import ScrollToTopOnMount from '../common/ScrollToTopOnMount';
 
 const MainContent = ({
     userData
@@ -15,6 +16,7 @@ const MainContent = ({
             <div className="col">
                 <h2 className="main-title">{`Welcome back, ${userData.email}`}</h2>
             </div>
+            <ScrollToTopOnMount />
         </motion.div>
     );
 };

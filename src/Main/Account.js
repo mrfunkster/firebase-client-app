@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 import { connect } from 'react-redux';
+import ScrollToTopOnMount from '../common/ScrollToTopOnMount';
 
 const Account = ({
     userData
@@ -34,6 +35,7 @@ const Account = ({
                     </div>
                 </div>
             </div>
+            <ScrollToTopOnMount />
         </motion.div>
     );
 };

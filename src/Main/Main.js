@@ -1,6 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Login from './Login';
 import MainContent from './MainContent';
@@ -8,7 +9,6 @@ import Registration from './Registration';
 import Account from './Account';
 
 import './Main.css'
-import { connect } from 'react-redux';
 
 const Main = ({
     userID
