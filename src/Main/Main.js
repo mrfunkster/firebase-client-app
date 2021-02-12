@@ -1,6 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 import Login from './Login';
 import MainContent from './MainContent';
@@ -8,17 +8,18 @@ import Registration from './Registration';
 import Account from './Account';
 
 import './Main.css'
+import { connect } from 'react-redux';
 
-const Main = () => {
-
-
+const Main = ({
+    userID
+}) => {
     return (
         <main className="main">
             <div className="container">
                 <AnimatePresence exitBeforeEnter>
                     <Switch>
                         <Route path="/" exact>
-                            <MainContent />
+                            {!userID.length ? <Redirect to="/login"/> :  <MainContent/>}
                         </Route>
                         <Route path="/registration">
                             <Registration />
@@ -27,7 +28,7 @@ const Main = () => {
                             <Login />
                         </Route>
                         <Route path="/account">
-                            <Account />
+                            {!userID.length ? <Redirect to="/login"/> :  <Account/>}
                         </Route>
                     </Switch>
                 </AnimatePresence>
@@ -36,4 +37,10 @@ const Main = () => {
     );
 };
 
-export default Main;
+const mapStateToProps = state => ({
+    userID: state.app.userID
+})
+
+export default connect(
+    mapStateToProps
+)(Main);
