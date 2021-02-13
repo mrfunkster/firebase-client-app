@@ -1,4 +1,4 @@
-import { CLEAR_USER_ID, HIDE_LOADER, SET_USER_DATA, SET_USER_ID, SHOW_LOADER, CLEAR_USER_DATA, ENTER_EDIT_MODE, EXIT_EDIT_MODE, UPDATE_USER_DATA } from "./types"
+import { CLEAR_USER_ID, HIDE_LOADER, SET_USER_DATA, SET_USER_ID, SHOW_LOADER, CLEAR_USER_DATA, ENTER_EDIT_MODE, EXIT_EDIT_MODE } from "./types"
 import base from '../../firebase';
 import history from '../history'
 
@@ -73,8 +73,8 @@ export const registerWithByEmailAndPassword = (formData) => {
                         });
                 });
         } catch (error) {
+            alert(error.message);
             dispatch(hideLoader());
-            console.log(error);
         }
     }
 }
