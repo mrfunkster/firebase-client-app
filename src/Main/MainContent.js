@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion'
 import { connect } from 'react-redux';
 import ScrollToTopOnMount from '../common/ScrollToTopOnMount';
+import { Link } from 'react-router-dom';
 
 const MainContent = ({
     userData
@@ -15,6 +16,9 @@ const MainContent = ({
         >
             <div className="col">
                 <h2 className="main-title">{`Welcome back, ${userData.email}`}</h2>
+                <div className="main-description">
+                    <p>If you want to get more detail about your account, visit <Link to="/account">account</Link> page.</p>
+                </div>
             </div>
             <ScrollToTopOnMount />
         </motion.div>

@@ -48,7 +48,6 @@ class Login extends Component {
                         <p>Enter your email and password to login or </p>
                         <Link to="/registration">register</Link>
                     </div>
-                    
                 </div>
     
                 <div className="col-sm-12 col-md-4 col-lg-3 form-section shadow">

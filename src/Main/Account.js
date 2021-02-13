@@ -15,7 +15,9 @@ const Account = ({
         >
             <div className="col">
                 <h2 className="main-title">Account</h2>
-                <p className="main-description">Your account info:</p>
+                <div className="main-description">
+                    <p>Your account info:</p>
+                </div>
                 <div className="account-info">
                     <div className="row">
                         <div className="col text-end">
