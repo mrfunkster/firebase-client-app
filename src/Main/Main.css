@@ -29,9 +29,13 @@
     padding: 10px;
     border: none;
     border-radius: 10px;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 .form-input label input:focus {
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
 }
 .button-input {
     width: 100%;
@@ -96,6 +100,8 @@
     border: none;
     border-radius: 10px;
     padding: 0 5px;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 .input-field {
     height: 40px;
@@ -103,6 +109,8 @@
 }
 .input-field input:focus {
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
 }
 .row.centered button {
     margin-top: 15px;
