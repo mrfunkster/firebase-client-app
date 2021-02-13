@@ -16,7 +16,7 @@ const MainContent = ({
         >
             <div className="row">
                 <div className="col">
-                    <h2 className="main-title">{`Welcome back, ${userData.email}`}</h2>
+                    <h2 className="main-title">{`Welcome back, ${!userData.name ? userData.email : userData.name}`}</h2>
                     <div className="main-description">
                         <p>If you want to get more detail about your account, visit <Link to="/account">account</Link> page.</p>
                     </div>
