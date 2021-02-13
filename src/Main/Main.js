@@ -15,24 +15,22 @@ const Main = ({
 }) => {
     return (
         <main className="main">
-            <div className="container">
-                <AnimatePresence exitBeforeEnter>
-                    <Switch>
-                        <Route path="/" exact>
-                            {!userID.length ? <Redirect to="/login"/> :  <MainContent/>}
-                        </Route>
-                        <Route path="/registration">
-                            <Registration />
-                        </Route>
-                        <Route path="/login">
-                            <Login />
-                        </Route>
-                        <Route path="/account">
-                            {!userID.length ? <Redirect to="/login"/> :  <Account/>}
-                        </Route>
-                    </Switch>
-                </AnimatePresence>
-            </div>
+            <AnimatePresence exitBeforeEnter>
+                <Switch>
+                    <Route path="/" exact>
+                        {!userID.length ? <Redirect to="/login"/> :  <MainContent/>}
+                    </Route>
+                    <Route path="/registration">
+                        <Registration />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
+                    </Route>
+                    <Route path="/account">
+                        {!userID.length ? <Redirect to="/login"/> :  <Account/>}
+                    </Route>
+                </Switch>
+            </AnimatePresence>
         </main>
     );
 };

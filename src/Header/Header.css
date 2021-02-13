@@ -31,10 +31,12 @@
     text-decoration: none;
     list-style: none;
     margin: 0 5px;
+    flex: none;
 }
 .nav-menu li a {
     text-decoration: none;
     color: white;
+    padding: 10px;
 }
 @media(max-width: 768px) {
     .header-title h2 {

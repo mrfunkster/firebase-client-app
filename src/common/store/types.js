@@ -6,3 +6,5 @@ export const SET_USER_ID = "SET_USER_ID";
 export const CLEAR_USER_ID = "CLEAR_USER_ID";
 export const SET_USER_DATA = "SET_USER_DATA";
 export const CLEAR_USER_DATA = "CLEAR_USER_DATA";
+export const ENTER_EDIT_MODE = "ENTER_EDIT_MODE";
+export const EXIT_EDIT_MODE = "EXIT_EDIT_MODE";

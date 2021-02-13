@@ -54,6 +54,65 @@
 .text-end {
     font-weight: bold;
 }
+
+.account-form {
+    width: 50%;
+    padding: 7px;
+    position: relative;
+}
+.account-form .fields {
+    position: relative;
+    z-index: 1;
+}
+.account-form .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.account-form .overlay-loader {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.account-form .row {
+    margin-bottom: 10px;
+}
+.row.centered {
+    justify-content: center;
+}
+.row.centered h3 {
+    text-align: center;
+    margin-top: 15px;
+}
+.input-field input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+.input-field {
+    height: 40px;
+    line-height: 40px;
+}
+.input-field input:focus {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+.row.centered button {
+    margin-top: 15px;
+}
+.edit-btn {
+    position: absolute;
+    right: 8px;
+    top: 0;
+}
+
 @media(max-width: 768px) {
     .form-section {
         margin: 15px 15px;
@@ -62,5 +121,8 @@
     .account-info {
         width: 100%;
         margin: none;
+    }
+    .account-form {
+        width: 100%;
     }
 }

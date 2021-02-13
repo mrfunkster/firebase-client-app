@@ -1,25 +1,30 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import history from "../common/history";
 
 import { logOut } from '../common/store/actions'
 
 const HeaderMenu = ({
     logOut,
     userID,
-    isLoading
 }) => {
 
     if(!userID.length) {
         return (
             <ul className="nav-menu">
-                <li><Link to="/registration">Sign Up</Link></li>
-                <li><Link to="/login" className="btn btn-success">Sign In</Link></li>
+                <li><Link to="/login">Sign In</Link></li>
+                <li className="btn btn-success"
+                    onClick={() => {
+                        history.push('/registration')
+                    }}
+                >Sign Up</li>
             </ul>
         );
     } else {
         return (
             <ul className="nav-menu">
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/account">Account</Link></li>
                 <li className="btn btn-danger"
                     onClick={() => {
@@ -37,7 +42,7 @@ const mapDispatchToProps = {
 
 const mapStateToProps = state => ({
     userID: state.app.userID,
-    isLoading: state.app.showLoader
+
 })
 
 export default connect(

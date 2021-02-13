@@ -1,15 +1,20 @@
-import { REGISTER, SHOW_LOADER, HIDE_LOADER, SET_USER_ID, CLEAR_USER_ID, SET_USER_DATA, CLEAR_USER_DATA } from "./types";
+import { REGISTER, SHOW_LOADER, HIDE_LOADER, SET_USER_ID, CLEAR_USER_ID, SET_USER_DATA, CLEAR_USER_DATA, ENTER_EDIT_MODE, EXIT_EDIT_MODE, UPDATE_USER_DATA } from "./types";
 
 const initialState = {
     userID: "",
     userData: {},
     showLoader: false,
+    editMode: false,
 }
 
 const appReducer = (state = initialState, action) => {
     switch(action.type) {
+        case ENTER_EDIT_MODE:
+            return {...state, editMode: true};
+        case EXIT_EDIT_MODE:
+            return {...state, editMode: false};
         case SET_USER_ID:
-            return {...state, userID: action.payload}
+            return {...state, userID: action.payload};
         case CLEAR_USER_ID:
             return {...state, userID: ""};
         case SET_USER_DATA: 
