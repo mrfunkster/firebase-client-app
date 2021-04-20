@@ -73,6 +73,7 @@ export const registerWithByEmailAndPassword = (formData) => {
                         });
                 });
         } catch (error) {
+            console.log(error.code);
             alert(error.message);
             dispatch(hideLoader());
         }
@@ -101,6 +102,7 @@ export const authWithEmailAndPassword = (formData) => {
                         });
                 });
         } catch (error) {
+            console.log(error.code);
             alert(error.message);
             dispatch(hideLoader());
         }
@@ -119,6 +121,7 @@ export const updateUserInfo = (formData, userID) => {
                 });
         } catch (error) {
             alert(error.message);
+            console.log(error.code);
             dispatch(hideLoader());
         };
     };
@@ -136,7 +139,8 @@ export const logOut = () => {
                     history.push('/login');
                 })
         } catch (error) {
-            alert(error.message)
+            console.log(error.code);
+            alert(error.message);
             dispatch(hideLoader());
         };
     };
