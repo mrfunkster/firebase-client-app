@@ -8,7 +8,8 @@ const {
   REACT_APP_PROJECT_ID,
   REACT_APP_STORAGE_BUCKET,
   REACT_APP_MESSAGING_SENDER_ID,
-  REACT_APP_APP_ID
+  REACT_APP_APP_ID,
+  REACT_APP_DATABASE_URL
 } = process.env;
 
 const base = firebase.initializeApp({
@@ -17,7 +18,8 @@ const base = firebase.initializeApp({
     projectId: REACT_APP_PROJECT_ID,
     storageBucket: REACT_APP_STORAGE_BUCKET,
     messagingSenderId: REACT_APP_MESSAGING_SENDER_ID,
-    appId: REACT_APP_APP_ID
+    appId: REACT_APP_APP_ID,
+    databaseURL: REACT_APP_DATABASE_URL
   }
 );
 
